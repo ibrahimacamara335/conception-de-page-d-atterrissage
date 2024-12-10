@@ -1,0 +1,138 @@
+/* Reset des marges et des paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+/* En-tête */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Produits */
+#produits {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+#produits h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.produits-container {
+    display: grid;
+    grid-template-columns: repeat(4, 4fr);
+    gap: 20px;
+}
+
+.produit {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.produit img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.produit h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.produit p {
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: #777;
+}
+
+.produit button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.produit button:hover {
+    background-color: #555;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Réactivité : Médias Queries */
+@media (max-width: 768px) {
+    .produits-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .produits-container {
+        grid-template-columns: 1fr;
+    }
+
+    .produit {
+        padding: 1rem;
+    }
+
+    header nav ul {
+        padding: 10px;
+    }
+}
